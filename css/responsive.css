@@ -410,6 +410,7 @@
 
     #service .down-arrows {
         bottom: 42px;
+        z-index: 888;
     }
 
     /* service part end */
