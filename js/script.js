@@ -247,6 +247,8 @@ $('.collapse a').on('click', function () {
 })
 
 // scroll spy part end
+
+
 // scroll spy part start
 
 var html_body = $('html, body');

@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   display: inline-block;
@@ -20,10 +24,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 html, body {
   scroll-behavior: unset !important;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 .navbar {

@@ -720,6 +720,7 @@
 /* ex device start */
 
 @media (max-width: 575.98px) {
+
     /* banner part start */
     #banner .banner-slide .banner-item {
         padding-top: 130px;
@@ -935,6 +936,11 @@
     /* team part end */
 
     /* footer part start */
+
+    #footer .footer-wrapper::after {
+        display: none;
+    }
+
     #footer .footer-logo-img {
         padding-top: 14px;
         padding-bottom: 60px;
@@ -972,5 +978,9 @@
         padding-left: 75px;
         padding-right: 75px;
     }
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
