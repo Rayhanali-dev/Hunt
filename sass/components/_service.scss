@@ -1,0 +1,141 @@
+#service {
+    position: relative;
+    padding-bottom: 50px;
+    .header {
+        h2 {
+            @include font(35px, 'Raleway', 400, $headingcolor);
+            margin-bottom: 15px;
+        }
+        p {
+            @include font(14px, 'Open Sans', 400, $paracolor);
+            line-height: 24px;
+            @include pgap(0px, 0px, 25px, 25px);
+            margin-bottom: 90px;
+        }
+    }
+    .service-wrapper{
+        .service-item-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            &.slick-center {
+                .service-right {
+                    filter: drop-shadow(5px 5px 4px #cacaca);
+                }
+                &:nth-child(odd) {
+                    .service-right {
+                        filter: drop-shadow(-5px 5px 4px #cacaca);
+                    }
+                }
+                .service-middle {
+                    .service-mid-icon {
+                        transform: scale(1.5);
+                        background-color: $primarybgcolor;
+                    }
+                }
+            }
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                .service-left {
+                    text-align: left;
+                }
+                .service-right {
+                    text-align: right;
+                    .service-right-shape {
+                        left: 500px;
+                    }
+                }
+
+            }
+            .service-left {
+                width: 40%;
+                text-align: right;
+                h4 {
+                    @include font(18px, 'Raleway', 500, $headingcolor);
+                    text-transform: uppercase;
+                }
+            }
+            .service-middle {
+                width: 10%;
+                align-items: center;
+                .service-mid-icon {
+                    width: 70px;
+                    height: 70px;
+                    background-color: $aboutbgcolor;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    transition: all linear .3s;
+                    img {
+                        width: 40px;
+                    }
+                }
+            }
+            .service-right {
+                width: 40%;
+                background-color: $aboutbgcolor;
+                position: relative;
+                @include pgap(30px, 30px, 20px, 70px);
+                box-sizing: border-box;
+                z-index: 1;
+                p {
+                    @include font(14px, 'Open Sans', 400, $paracolor);
+                    line-height: 24px;
+                }
+                .service-right-shape {
+                    position: absolute;
+                    left: -15px;
+                    top: 50%;
+                    width: 35px;
+                    height: 35px;
+                    background-color: $aboutbgcolor;
+                    transform: translateY(-50%) rotate(45deg);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    .service-line {
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+        img {
+            height: 695px;
+            width: 1px;
+        }
+    }
+    .up-arrows {
+        position: absolute;
+        top: 140px;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        transform: translate(-50%);
+        text-align: center;
+        z-index: 555;
+        transition: all linear .3s;
+        &:hover {
+            background-color: $primarybgcolor;
+            border: 1px solid $primarybgcolor;
+        }
+    }
+    .down-arrows {
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        transform: translate(-50%);
+        text-align: center;
+        transition: all linear .3s;
+        &:hover {
+            background-color: $primarybgcolor;
+            border: 1px solid $primarybgcolor;
+        }
+    }
+}

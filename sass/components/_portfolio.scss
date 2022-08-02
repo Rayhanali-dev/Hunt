@@ -1,0 +1,86 @@
+#portfolio {
+    background: url(../images/portfoliobg.jpg) no-repeat center/cover;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: -1;
+    }
+    .header {
+        h2 {
+            @include font(35px, 'Raleway', 400, $normalcolor);
+            margin-bottom: 15px;
+        }
+        p {
+            @include font(14px, 'Open Sans', 400, $banparacolor);
+            line-height: 24px;
+            @include pgap(0px, 0px, 25px, 25px);
+            margin-bottom: 40px;
+        }
+    }
+    .portfolio-img {
+        margin-bottom: 24px;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            opacity: 0;
+            transition: all linear .3s;
+            background-color: rgba(0, 0, 0, 0.651);
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                i {
+                    font-size: 30px;
+                }
+            }
+        }
+        &:hover {
+            .portfolio-overlay {
+                height: 100%;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.main-port {
+    position: relative;
+    z-index: 9999;
+    .port-top-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background-color: $buttonbordercolor;
+        transform: skewX(-88deg);
+        transform-origin: left top;
+    }
+    .port-bottom-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background-color: $buttonbordercolor;
+        transform: skewX(-87deg);
+        transform-origin: left bottom;
+    }
+}

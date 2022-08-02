@@ -1,0 +1,118 @@
+#price {
+    .header {
+        h2 {
+            @include font(35px, 'Raleway', 400, $headingcolor);
+            margin-bottom: 15px;
+            text-transform: capitalize;
+        }
+        p {
+            @include font(14px, 'Open Sans', 400, $paracolor);
+            line-height: 24px;
+            @include pgap(0px, 0px, 25px, 25px);
+            margin-bottom: 40px;
+        }
+    }
+    .main-price {
+        background-color: $commentbackground;
+        position: relative;
+        margin-bottom: 20px;
+        .top-shape {
+            @include pgap(23px, 95px, 0, 0);
+            background-color: $aboutcirclebg;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+            transition: all ease .3s;
+            h4 {
+                @include font(20px, 'Raleway', 400, $normalcolor);
+                text-transform: uppercase;
+                transition: all ease .3s;
+            }
+            
+        }
+        .top-shape-circle {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            border: 1px solid $aboutcirclebg;
+            border-radius: 50%;
+            background-color: $buttonbordercolor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .inner-top-shape-circle {
+                background-color: $aboutcirclebg;
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all ease .3s;
+                .circle-content {
+                    h3 {
+                        @include font(29px, 'Raleway', 500, $normalcolor);
+                        line-height: 24px;
+                    }
+                    p {
+                        @include font(12px, 'Raleway', 300, #9a9a9a);
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        .mid-shape {
+            @include pgap(50px, 10px, 0, 0);
+            ul {
+                li {
+                    a {
+                        @include font(14px, 'Open Sans', 400, $paracolor);
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .bottom-shape {
+            background-color: $aboutcirclebg;
+            @include pgap(43px, 25px, 0, 0);
+            clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+            transition: all ease .3s;
+            a {
+                @include font(16px, 'Raleway', 500, $normalcolor);
+                text-transform: uppercase;
+                transition: all ease .3s;
+            }
+        }
+        &:hover {
+            filter: drop-shadow(0px 3px 4px #cccccc);
+            .top-shape {
+                background-color: $primarybgcolor;
+                h4 {
+                    color: $headingcolor;
+                }
+
+            }
+            .bottom-shape {
+                background-color: $primarybgcolor;
+                a {
+                    color: $headingcolor;
+                }
+            }
+            .top-shape-circle {
+                border: 1px solid $primarybgcolor;
+            }
+            .inner-top-shape-circle {
+                background-color: $primarybgcolor;
+                .circle-content {
+                    h3 {
+                        color: $btnhovcolor;
+                    }
+                    p {
+                        color: $btnhovcolor;
+                    }
+                }
+            }
+        }
+    }
+}

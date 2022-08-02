@@ -1,0 +1,191 @@
+#comment {
+    position: relative;
+    background: url(../images/comment-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 130px;
+    padding-bottom: 100px;
+    z-index: 1;
+    overflow: hidden;
+    .comment-left-wrapper {
+        .comment-left-item {
+            &.slick-center {
+                .comment-left-img {
+                    transform: scale(1.5);
+                    background-color: $primarybgcolor;
+                    .comment-img-overlay {
+                        opacity: 0;
+                    }
+                }
+            }
+            margin: 30px 0;
+            .comment-left-img {
+                width: 100px;
+                height: 100px;
+                background-color: #cccccc;
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+                img {
+                    object-fit: cover;
+                }
+                .comment-img-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0.6);
+                }
+            }
+        }
+    }
+    .comment-chain {
+        position: relative;
+        .inner-comment-chain {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            img {
+                height: 495px;
+            }
+        }
+        .comment-prev {
+            position: absolute;
+            top: -41px;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            transform: translateX(-50%);
+            text-align: center;
+            i {
+                color: $normalcolor;
+            }
+        }
+        .comment-next {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            transform: translateX(-50%);
+            text-align: center;
+            i {
+                color: $normalcolor;
+            }
+        }
+    }
+    .comment-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.838);
+        z-index: -1;
+    }
+
+    .comment-right-wrapper {
+        .comment-right-item {
+            @include pgap(50px, 50px, 30px, 30px);
+            background-color: $commentbackground;
+            position: relative;
+            margin-left: 30px;
+            box-sizing: border-box;
+            .comment-right-shape {
+                position: absolute;
+                top: 50%;
+                left: -20px;
+                transform: translateY(-50%) rotate(45deg);
+                width: 40px;
+                height: 40px;
+                background-color: $commentbackground;
+            }
+            h3 {
+                @include font(20px, 'Raleway', 500, $btnhovcolor);
+                margin-bottom: 5px;
+            }
+            .comment-font {
+                a {
+                    color: $primarybgcolor;
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                }
+            }
+            h5 {
+                @include font(16px, 'Raleway', 500, $paracolor);
+                margin-bottom: 20px;
+            }
+            p {
+                @include font(14px, 'Open Sans', 400, $paracolor);
+                line-height: 24px;
+                @include pgap(0, 30px, 0, 96px);
+            }
+            h4 {
+                text-align: right;
+                font-size: 20px;
+                font-family: 'rayhan';
+            }
+            .quote-left {
+                position: absolute;
+                top: 4%;
+                left: 40%;
+                transform: translate(-50%, 50%);
+                opacity: 0.2;
+                i {
+                    font-size: 140px;
+                    color: $banheadingcolor;
+                }
+            }
+            .quote-right {
+                position: absolute;
+                top: 15%;
+                left: 57%;
+                transform: translate(-50%, 50%);
+                opacity: 0.2;
+                i {
+                    font-size: 140px;
+                    color: $banheadingcolor;
+                }
+                
+            }
+        }
+    }
+}
+
+@font-face {
+    font-family: 'rayhan';
+    src: url(../webfonts/Autograf_PersonalUseOnly.ttf);
+}
+
+.main-comment {
+    position: relative;
+    .main-top-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background-color: #fff;
+        z-index: 444;
+        transform: skewX(-87deg);
+        transform-origin: left top;
+    }
+    .main-bottom-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background-color: #fff;
+        z-index: 444;
+        transform: skewX(-87deg);
+        transform-origin: left bottom;
+    }
+}

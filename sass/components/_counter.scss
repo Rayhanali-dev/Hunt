@@ -1,0 +1,57 @@
+#counter {
+    background: linear-gradient(rgba(0, 0, 0, 0.945), rgba(0, 0, 0, 0.918)), url(../images/counterbg.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .counter-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: rotate(-3deg);
+        .counter-item {
+            width: 244px;
+            border: 1px solid $buttonbordercolor;
+            box-sizing: border-box;
+            @include pgap(30px, 30px, 0, 0);
+            transform: skew(-3deg);
+            h4 {
+                @include font(30px, 'Raleway', 500, $normalcolor);
+                margin-bottom: 20px;
+                transform: rotate(3deg)
+            }
+            p {
+                @include font(20px, 'Raleway', 500, $normalcolor);
+                transform: rotate(3deg);
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.counter-main-shape {
+    position: relative;
+    .counter-top-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-color: $buttonbordercolor;
+        z-index: 666;
+        transform: skewX(-87deg);
+        transform-origin: left top;
+    }
+    .counter-bottom-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-color: $buttonbordercolor;
+        z-index: 666;
+        transform: skewX(-87deg);
+        transform-origin: left bottom;
+    }
+}

@@ -1,0 +1,12 @@
+#copyright {
+    @include pgap(20px, 20px, 0, 0);
+    background-color: $aboutcirclebg;
+    .copyright-content {
+        p {
+            @include font(13px, 'Lato', 400, $banparacolor);
+        }
+        span {
+            color: $banheadingcolor;
+        }
+    }
+}
